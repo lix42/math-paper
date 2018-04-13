@@ -1,0 +1,8 @@
+src/*.log
+src/assets/*
+node_modules/
+coverage/*
+build/*
+__generated__/
+~*
+/.awcache

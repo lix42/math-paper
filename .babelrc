@@ -1,10 +1,109 @@
 {
-  "presets": ["react", ["env", { "modules": false }]],
-  "plugins": ["react-hot-loader/babel", "babel-plugin-transform-object-rest-spread"],
   "env": {
     "test": {
-      "presets": ["react", ["env", { "modules": "commonjs" }]],
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            },
+            "useBuiltIns": true
+          }
+        ],
+        "react"
+      ],
+      "plugins": [
+        "babel-plugin-transform-flow-strip-types",
+        "babel-plugin-transform-class-properties",
+        "babel-plugin-transform-export-extensions",
+        "babel-plugin-transform-object-rest-spread",
+        "syntax-dynamic-import",
+        [
+          "transform-runtime",
+          {
+            "helpers": true,
+            "polyfill": false
+          }
+        ]
+      ]
+    },
+    "development": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": ["last 1 Chrome versions", "last 1 Firefox versions"]
+            },
+            "useBuiltIns": true,
+            "modules": false,
+            "debug": true
+          }
+        ],
+        "react"
+      ],
+      "plugins": [
+        "babel-plugin-transform-flow-strip-types",
+        "babel-plugin-transform-class-properties",
+        "babel-plugin-transform-export-extensions",
+        "babel-plugin-transform-object-rest-spread",
+        "syntax-dynamic-import",
+        "react-hot-loader/babel",
+        "transform-react-jsx-self",
+        "transform-react-jsx-source",
+        [
+          "transform-runtime",
+          {
+            "helpers": true,
+            "polyfill": false
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": [
+                "last 2 Chrome versions",
+                "last 2 Firefox versions",
+                "last 2 Edge versions",
+                "last 2 Safari versions",
+                "last 2 Android versions",
+                "last 2 ChromeAndroid versions"
+              ]
+            },
+            "modules": false,
+            "useBuiltIns": true
+          }
+        ],
+        "react"
+      ],
+
+      "plugins": [
+        "babel-plugin-transform-flow-strip-types",
+        "babel-plugin-transform-class-properties",
+        "babel-plugin-transform-export-extensions",
+        "babel-plugin-transform-object-rest-spread",
+        "syntax-dynamic-import",
+        [
+          "transform-react-remove-prop-types",
+          {
+            "removeImport": true,
+            "mode": "remove"
+          }
+        ],
+        [
+          "transform-runtime",
+          {
+            "helpers": true,
+            "polyfill": false
+          }
+        ]
+      ]
     }
   }
 }

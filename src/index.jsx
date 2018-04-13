@@ -6,28 +6,30 @@
 */
 
 // react deps
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 // hot reload for development
-import { AppContainer } from 'react-hot-loader';
+import { AppContainer } from "react-hot-loader";
 
-import App from './App';
+import App from "./App";
 
-import './style.scss';
+import "./style.scss";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
-const render = (Component) => {
+const render = Component => {
   ReactDOM.render(
     <AppContainer>
       <Component />
     </AppContainer>,
-    root,
+    root
   );
 };
 
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./App', () => { render(App); });
+  module.hot.accept("./App", () => {
+    render(App);
+  });
 }

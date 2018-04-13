@@ -1,0 +1,7 @@
+src/*.log
+src/assets/*
+coverage/*
+build/*
+__generated__/
+~*
+/.awcache
