@@ -21,7 +21,7 @@ module.exports = {
     },
   },
   rootDir: "./",
-  testMatch: ["**/*.{spec,test}.{js,jsx}"],
+  testMatch: ["**/*.spec.{js,jsx}"],
   testPathIgnorePatterns: ["tmp", "/node_modules/", "build/", "coverage"],
   transform: {
     "^.+\\.(js|jsx)$": "babel-jest",
