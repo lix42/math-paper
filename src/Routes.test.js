@@ -1,8 +1,8 @@
 import React from "react";
 import { mount } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
-import Routes from "./../../Routes";
-import { Home, About } from "./../../containers";
+import Routes from "./Routes";
+import { Home, About } from "./containers";
 
 test("default path should redirect to Home component", () => {
   const wrapper = mount(
