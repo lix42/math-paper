@@ -2,69 +2,65 @@
   "env": {
     "test": {
       "presets": [
+        "@babel/preset-flow",
+        "@babel/preset-react",
         [
-          "env",
+          "@babel/preset-env",
           {
             "targets": {
               "node": "current"
             },
-            "useBuiltIns": true
+            "useBuiltIns": "entry"
           }
-        ],
-        "react"
+        ]
       ],
       "plugins": [
-        "babel-plugin-transform-flow-strip-types",
-        "babel-plugin-transform-class-properties",
-        "babel-plugin-transform-export-extensions",
-        "babel-plugin-transform-object-rest-spread",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
         "syntax-dynamic-import",
         [
-          "transform-runtime",
+          "@babel/plugin-transform-runtime",
           {
-            "helpers": true,
-            "polyfill": false
+            "helpers": true
           }
         ]
       ]
     },
     "development": {
       "presets": [
+        "@babel/preset-flow",
+        "@babel/preset-react",
         [
-          "env",
+          "@babel/preset-env",
           {
             "targets": {
               "browsers": ["last 1 Chrome versions", "last 1 Firefox versions"]
             },
-            "useBuiltIns": true,
+            "useBuiltIns": "entry",
             "modules": false,
             "debug": true
           }
-        ],
-        "react"
+        ]
       ],
       "plugins": [
-        "babel-plugin-transform-flow-strip-types",
-        "babel-plugin-transform-class-properties",
-        "babel-plugin-transform-export-extensions",
-        "babel-plugin-transform-object-rest-spread",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
         "syntax-dynamic-import",
         "react-hot-loader/babel",
-        "transform-react-jsx-self",
-        "transform-react-jsx-source",
         [
-          "transform-runtime",
+          "@babel/plugin-transform-runtime",
           {
-            "helpers": true,
-            "polyfill": false
+            "helpers": true
           }
         ]
       ]
     },
     "production": {
       "presets": [
+        "@babel/preset-flow",
+        "@babel/preset-react",
         [
-          "env",
+          "@babel/preset-env",
           {
             "targets": {
               "browsers": [
@@ -77,30 +73,19 @@
               ]
             },
             "modules": false,
-            "useBuiltIns": true
+            "useBuiltIns": "entry"
           }
-        ],
-        "react"
+        ]
       ],
 
       "plugins": [
-        "babel-plugin-transform-flow-strip-types",
-        "babel-plugin-transform-class-properties",
-        "babel-plugin-transform-export-extensions",
-        "babel-plugin-transform-object-rest-spread",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
         "syntax-dynamic-import",
         [
-          "transform-react-remove-prop-types",
+          "@babel/plugin-transform-runtime",
           {
-            "removeImport": true,
-            "mode": "remove"
-          }
-        ],
-        [
-          "transform-runtime",
-          {
-            "helpers": true,
-            "polyfill": false
+            "helpers": true
           }
         ]
       ]
