@@ -6,6 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server -d",
     "build": "cross-env NODE_ENV=production webpack -p",
+    "flow": "flow",
+    "typed": "flow-typed install",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "prettier": "prettier '**/*.{js,jsx,json}' '*.{js,json}' --write"
@@ -70,8 +72,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "D": "^1.0.0",
     "classnames": "^2.2.6",
+    "flow-typed": "^2.5.1",
     "jss": "^9.8.7",
+    "jss-preset-default": "^4.5.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
