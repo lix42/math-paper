@@ -21,11 +21,10 @@ module.exports = {
     },
   },
   rootDir: "./",
+  snapshotSerializers: ["enzyme-to-json/serializer"],
   testMatch: ["**/*.spec.{js,jsx}"],
   testPathIgnorePatterns: ["tmp", "/node_modules/", "build/", "coverage"],
-  transform: {
-    "^.+\\.(js|jsx)$": "babel-jest",
-  },
+  testURL: "http://localhost/",
   verbose: true,
   moduleFileExtensions: ["js", "jsx"],
   modulePaths: [
