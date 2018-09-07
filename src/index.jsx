@@ -1,3 +1,4 @@
+// @flow
 /* eslint-disable import/no-extraneous-dependencies */
 /*
   issue with react-hot-loader
@@ -16,17 +17,19 @@ import App from "./App";
 const root = document.getElementById("root");
 
 const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    root
-  );
+  if (root != null) {
+    ReactDOM.render(
+      <AppContainer>
+        <Component />
+      </AppContainer>,
+      root
+    );
+  }
 };
 
 render(App);
 
-if (module.hot) {
+if ("hot" in module && module.hot != null) {
   module.hot.accept("./App", () => {
     render(App);
   });

@@ -16,19 +16,9 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    "flowtype-errors",
-    "flowtype",
-    "import",
-    "jest",
-    "jsx-a11y",
-    "prettier",
-    "promise",
-    "react",
-  ],
+  plugins: ["import", "jest", "jsx-a11y", "prettier", "promise", "react"],
   extends: [
     "eslint:recommended",
-    "plugin:flowtype/recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:import/errors",
@@ -48,13 +38,8 @@ module.exports = {
     "prefer-const": "error",
     "react/no-danger": "error",
     "react/no-find-dom-node": "warn",
-    "flowtype-errors/show-errors": "error",
-    "flowtype-errors/show-warnings": "warn",
   },
   settings: {
     "import/resolver": "webpack",
-    flowtype: {
-      onlyFilesWithFlowAnnotation: true,
-    },
   },
 };
