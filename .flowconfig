@@ -6,7 +6,6 @@
 
 [libs]
 flow-typed
-node_modules
 
 [lints]
 
