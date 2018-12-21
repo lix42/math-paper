@@ -8,7 +8,9 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      impliedStrict: true,
     },
+    ecmaVersion: 6,
   },
   parser: "babel-eslint",
   parserOptions: {
@@ -16,14 +18,11 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["import", "jest", "jsx-a11y", "prettier", "promise", "react"],
+  plugins: ["jest", "jsx-a11y", "prettier", "promise", "react"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:array-func/recommended",
     "plugin:promise/recommended",
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
@@ -39,7 +38,5 @@ module.exports = {
     "react/no-danger": "error",
     "react/no-find-dom-node": "warn",
   },
-  settings: {
-    "import/resolver": "webpack",
-  },
+  settings: {},
 };
