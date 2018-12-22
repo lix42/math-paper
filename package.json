@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "default": "npm run flow && npm run test && npm run build",
+    "default": "npm run test && npm run build",
     "start": "cross-env NODE_ENV=development webpack-dev-server -d",
     "build": "cross-env NODE_ENV=production webpack -p",
+    "check": "npm run flow & npm run lint",
     "flow": "flow",
     "typed": "flow-typed install",
+    "pretest": "npm run check",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "lint": "eslint .",
@@ -17,6 +19,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm test"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -47,10 +54,12 @@
     "flow-bin": "^0.89.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.2.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.4.2",
     "node-sass": "^4.8.3",
     "prettier": "^1.12.0",
+    "pretty-quick": "^1.8.0",
     "react-hot-loader": "^4.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",

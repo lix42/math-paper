@@ -2,6 +2,8 @@ src/*.log
 src/assets/*
 coverage/*
 build/*
+node_modules/*
+flow-typed/*
 __generated__/
 ~*
 /.awcache
