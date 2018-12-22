@@ -22,7 +22,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm test",
+      "pre-commit": "pretty-quick --staged",
       "pre-push": "pretty-quick --staged && npm test"
     }
   },
