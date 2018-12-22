@@ -14,14 +14,16 @@
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "lint": "eslint .",
-    "prettier": "prettier '**/*.{js,jsx,json}' '*.{js,json}' --write"
+    "prettier": "prettier '**/*.{js,jsx,json}' '*.{js,json}' --write",
+    "pretty-quick": "pretty-quick"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm test"
+      "pre-commit": "pretty-quick --staged && npm test",
+      "pre-push": "pretty-quick --staged && npm test"
     }
   },
   "devDependencies": {
