@@ -13,7 +13,7 @@
  * https://github.com/flowtype/flow-typed
  */
 
-declare module 'eslint-import-resolver-webpack' {
+declare module "eslint-import-resolver-webpack" {
   declare module.exports: any;
 }
 
@@ -22,17 +22,17 @@ declare module 'eslint-import-resolver-webpack' {
  * require those files directly. Feel free to delete any files that aren't
  * needed.
  */
-declare module 'eslint-import-resolver-webpack/config' {
+declare module "eslint-import-resolver-webpack/config" {
   declare module.exports: any;
 }
 
 // Filename aliases
-declare module 'eslint-import-resolver-webpack/config.js' {
-  declare module.exports: $Exports<'eslint-import-resolver-webpack/config'>;
+declare module "eslint-import-resolver-webpack/config.js" {
+  declare module.exports: $Exports<"eslint-import-resolver-webpack/config">;
 }
-declare module 'eslint-import-resolver-webpack/index' {
-  declare module.exports: $Exports<'eslint-import-resolver-webpack'>;
+declare module "eslint-import-resolver-webpack/index" {
+  declare module.exports: $Exports<"eslint-import-resolver-webpack">;
 }
-declare module 'eslint-import-resolver-webpack/index.js' {
-  declare module.exports: $Exports<'eslint-import-resolver-webpack'>;
+declare module "eslint-import-resolver-webpack/index.js" {
+  declare module.exports: $Exports<"eslint-import-resolver-webpack">;
 }

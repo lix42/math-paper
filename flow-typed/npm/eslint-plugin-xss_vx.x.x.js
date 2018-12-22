@@ -13,7 +13,7 @@
  * https://github.com/flowtype/flow-typed
  */
 
-declare module 'eslint-plugin-xss' {
+declare module "eslint-plugin-xss" {
   declare module.exports: any;
 }
 
@@ -22,60 +22,66 @@ declare module 'eslint-plugin-xss' {
  * require those files directly. Feel free to delete any files that aren't
  * needed.
  */
-declare module 'eslint-plugin-xss/lib/index' {
+declare module "eslint-plugin-xss/lib/index" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/lib/re' {
+declare module "eslint-plugin-xss/lib/re" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/lib/Rules' {
+declare module "eslint-plugin-xss/lib/Rules" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/lib/rules/no-location-href-assign' {
+declare module "eslint-plugin-xss/lib/rules/no-location-href-assign" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/lib/rules/no-mixed-html' {
+declare module "eslint-plugin-xss/lib/rules/no-mixed-html" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/lib/tree' {
+declare module "eslint-plugin-xss/lib/tree" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/tests/lib/rules/no-location-href-assign' {
+declare module "eslint-plugin-xss/tests/lib/rules/no-location-href-assign" {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-xss/tests/lib/rules/no-mixed-html' {
+declare module "eslint-plugin-xss/tests/lib/rules/no-mixed-html" {
   declare module.exports: any;
 }
 
 // Filename aliases
-declare module 'eslint-plugin-xss/lib/index.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/lib/index'>;
+declare module "eslint-plugin-xss/lib/index.js" {
+  declare module.exports: $Exports<"eslint-plugin-xss/lib/index">;
 }
-declare module 'eslint-plugin-xss/lib/re.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/lib/re'>;
+declare module "eslint-plugin-xss/lib/re.js" {
+  declare module.exports: $Exports<"eslint-plugin-xss/lib/re">;
 }
-declare module 'eslint-plugin-xss/lib/Rules.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/lib/Rules'>;
+declare module "eslint-plugin-xss/lib/Rules.js" {
+  declare module.exports: $Exports<"eslint-plugin-xss/lib/Rules">;
 }
-declare module 'eslint-plugin-xss/lib/rules/no-location-href-assign.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/lib/rules/no-location-href-assign'>;
+declare module "eslint-plugin-xss/lib/rules/no-location-href-assign.js" {
+  declare module.exports: $Exports<
+    "eslint-plugin-xss/lib/rules/no-location-href-assign"
+  >;
 }
-declare module 'eslint-plugin-xss/lib/rules/no-mixed-html.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/lib/rules/no-mixed-html'>;
+declare module "eslint-plugin-xss/lib/rules/no-mixed-html.js" {
+  declare module.exports: $Exports<"eslint-plugin-xss/lib/rules/no-mixed-html">;
 }
-declare module 'eslint-plugin-xss/lib/tree.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/lib/tree'>;
+declare module "eslint-plugin-xss/lib/tree.js" {
+  declare module.exports: $Exports<"eslint-plugin-xss/lib/tree">;
 }
-declare module 'eslint-plugin-xss/tests/lib/rules/no-location-href-assign.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/tests/lib/rules/no-location-href-assign'>;
+declare module "eslint-plugin-xss/tests/lib/rules/no-location-href-assign.js" {
+  declare module.exports: $Exports<
+    "eslint-plugin-xss/tests/lib/rules/no-location-href-assign"
+  >;
 }
-declare module 'eslint-plugin-xss/tests/lib/rules/no-mixed-html.js' {
-  declare module.exports: $Exports<'eslint-plugin-xss/tests/lib/rules/no-mixed-html'>;
+declare module "eslint-plugin-xss/tests/lib/rules/no-mixed-html.js" {
+  declare module.exports: $Exports<
+    "eslint-plugin-xss/tests/lib/rules/no-mixed-html"
+  >;
 }
