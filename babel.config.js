@@ -30,6 +30,7 @@ const defaultPlugins = [
   "@babel/plugin-proposal-object-rest-spread",
   "syntax-dynamic-import",
   "@babel/plugin-transform-react-display-name",
+  "trace",
   "macros",
   [
     "@babel/plugin-transform-runtime",
