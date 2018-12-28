@@ -1,7 +1,7 @@
 /* eslint-disable xss/no-mixed-html */
 const os = require("os");
-const fs = require("fs");
 const path = require("path");
+const babelrc = require("../../babel.config");
 
 const isDev =
   process.env.NODE_ENV !== "production" && process.argv.indexOf("-p") === -1;
@@ -10,12 +10,6 @@ const isDev =
 const pkgRoot = path.resolve(__dirname, "../../");
 const srcRoot = path.resolve(pkgRoot, "src");
 const outputBuild = path.join(pkgRoot, "build");
-
-const babelrc = JSON.parse(
-  fs.readFileSync(path.join(pkgRoot, ".babelrc"), {
-    encoding: "utf8",
-  })
-);
 
 module.exports = {
   threadCount: Math.max(os.cpus().length - 1, 1),
